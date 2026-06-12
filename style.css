@@ -1,0 +1,178 @@
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff9a9e,#fecfef);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-x:hidden;
+}
+
+.container{
+    text-align:center;
+}
+
+h1{
+    color:#000;
+    margin-bottom:25px;
+}
+
+.polaroid{
+    background:#fff;
+    padding:15px 15px 30px;
+    width:320px;
+    border-radius:10px;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.polaroid img,
+.texto-destaque{
+    width:100%;
+    height:320px;
+    border-radius:5px;
+}
+
+.polaroid img{
+    object-fit:cover;
+}
+
+.texto-destaque{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#d81b60;
+    font-size:24px;
+    font-weight:bold;
+    background:#fff0f3;
+    padding:15px;
+    box-sizing:border-box;
+}
+
+.caption{
+    margin-top:12px;
+    font-size:18px;
+}
+
+button{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#d81b60;
+    color:#fff;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+button:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+/* =======================
+   CORAÇÕES CAINDO
+======================= */
+
+.coracao-caindo{
+    position:fixed;
+    top:-30px;
+    font-size:24px;
+    animation:cair 6s linear forwards;
+    pointer-events:none;
+    z-index:9999;
+}
+
+@keyframes cair{
+    to{
+        transform:translateY(110vh);
+    }
+}
+
+/* =======================
+   TELA FINAL
+======================= */
+
+.tela-final{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    z-index:99999;
+}
+
+.carta{
+    background:#fff;
+    max-width:700px;
+    width:90%;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.carta h2{
+    color:#d81b60;
+    margin-bottom:25px;
+}
+
+/* IMPORTANTE:
+   Faz respeitar as quebras de linha */
+.carta p{
+    white-space:pre-line;
+    line-height:1.9;
+    font-size:20px;
+    color:#444;
+}
+
+.carta button{
+    margin-top:30px;
+}
+
+.assinatura{
+    margin-top:30px;
+    color:#d81b60;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* =======================
+   RESPONSIVO
+======================= */
+
+@media(max-width:768px){
+
+    .polaroid{
+        width:90%;
+        max-width:320px;
+    }
+
+    .polaroid img,
+    .texto-destaque{
+        height:280px;
+    }
+
+    .carta{
+        padding:25px;
+    }
+
+    .carta p{
+        font-size:18px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+}

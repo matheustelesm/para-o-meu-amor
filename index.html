@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Letícia!</title>
+<link rel="icon" type="image/png" href="img/hearts.png">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<h1>Para o meu Amor ❤️</h1>
+
+<div class="polaroid" id="cartao">
+<img id="foto" style="display:none;">
+<div id="texto-destaque" class="texto-destaque"></div>
+<div class="caption" id="legenda"></div>
+</div>
+
+<button id="btnProximo" onclick="proximaFoto()">Ver Próxima Lembrança ✨</button>
+<button id="btnCarta" onclick="abrirCarta()" style="display:none">💌 Abrir Carta</button>
+</div>
+
+<div id="telaFinal" class="tela-final">
+<div class="carta">
+<h2>💌 Para Letícia</h2>
+<p id="textoCarta"></p>
+<button onclick="location.reload()">❤️ Recomeçar História</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
