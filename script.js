@@ -165,7 +165,7 @@ Eu te amo!!
 
 ❤️ ❤️ ❤️
 
-Feliz Dia dos Namorados! ❤️
+Feliz Dia dos Namorados!
 `;
  escreverTexto(document.getElementById('textoCarta'),msg,25);
  confetti({particleCount:300,spread:180});
